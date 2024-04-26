@@ -1,0 +1,11 @@
+version: '3'
+services:
+  cron:
+    build: .
+    container_name: cron-get-pem
+    restart: always
+    environment:
+      - WEBSITE_HOST=google.com
+      - CRON_EXPRESSION=*/1 * * * *
+    volumes:
+      - ./nginx/certs:/app/cert
