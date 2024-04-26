@@ -3,7 +3,7 @@
 cmd
 ```
 docker run \
-  --name cron-get-pem \
+  --name cron-get-pem -d \
   --restart always \
   -e WEBSITE_HOST=google.com \
   -e CRON_EXPRESSION='*/1 * * * *' \
